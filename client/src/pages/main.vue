@@ -8,14 +8,14 @@
 
 <script>
 import message from '@/components/message'
-const API_URL = "http://localhost:3000/messages"
+const API_URL = "http://0.0.0.0:3000/messages"
 export default {
   data: () => ({
     messages: []
   }),
   mounted() {
     if (this.$route.params.name) {
-      const API_URL_NAME = "http://localhost:3000/messages/name?target="+this.$route.params.name
+      const API_URL_NAME = "http://0.0.0.0:3000/messages/name?target="+this.$route.params.name
       fetch(API_URL_NAME, {
         method: 'GET',
         headers: { 'content-type': 'application/json' }
