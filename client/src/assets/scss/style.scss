@@ -1,0 +1,13 @@
+// import spectre styles and variables
+@import "variables";
+@import "node_modules/spectre.css/src/spectre";
+@import "node_modules/spectre.css/src/spectre-icons";
+@import "node_modules/spectre.css/src/spectre-exp";
+@import "node_modules/spectre.css/src/forms";
+
+// import font
+@import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');
+
+// import page styles
+@import "pages/main";
+@import "pages/post";

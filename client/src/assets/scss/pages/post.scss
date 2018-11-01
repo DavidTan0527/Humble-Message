@@ -1,0 +1,42 @@
+#_post {
+  max-width: $normal-width;
+  margin: .8rem auto;
+  padding: 2rem 5rem 0;
+  .form-group {
+    .form-label {
+      font-size: $font-size-lg;
+      color: #fff;
+    }
+    .form-input {
+      border-radius: .2rem;
+      color: #fff;
+      border-color: $color-1;
+      background-color: lighten($color-1, 3%);
+      font-weight: 500;
+      &:focus {
+        box-shadow: 0 0 0 .05rem lighten($color-1, 8%);
+      }
+      &:placeholder-shown {
+        border-color: $color-1;
+        background-color: lighten($color-1, 3%);
+      }
+      &::placeholder {
+        color: rgba(#fff, .1);
+      }
+    }
+  }
+
+  button {
+    margin-top: .8rem;
+    float: right;
+    border-radius: .2rem;
+    &:hover {
+      background-color: $primary-color-dark;
+      border-color: $primary-color-dark;
+      color: #ccc;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
