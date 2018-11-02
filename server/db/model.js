@@ -2,8 +2,8 @@ const Joi = require('joi');
 const db = require('./connections');
 
 const schema = Joi.object().keys({
-  self   : Joi.string().alphanum().required(),
-  target : Joi.string().alphanum().required(),
+  self   : Joi.string().required(),
+  target : Joi.string().required().regex(/\//ig, { invert: true }),
   message: Joi.string().required(),
   public : Joi.boolean().required()
 });
@@ -17,10 +17,12 @@ function getAll() {
 }
 
 function get(name) {
+  var n = new RegExp(name,'i');
   return messages.find({
-    "target": name
+    "target": n
   })
 }
+
 
 function post(msg) {
   const output = Joi.validate(msg, schema);
