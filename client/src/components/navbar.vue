@@ -2,13 +2,13 @@
   <div id="_navbar">
     <div class="navbar-container">
       <header class="navbar">
-        <section class="navbar-section title">
+        <div class="section title">
           <router-link to="/" class="btn btn-link">Humble Dog Message Board</router-link>
-        </section>
-        <section class="navbar-section">
+        </div>
+        <div class="section">
           <router-link to="/post" 
-          class="btn btn-link" tag="button">Post message</router-link>
-        </section>
+          class="btn btn-link post" tag="button">Post message</router-link>
+        </div>
       </header>
     </div>
 
@@ -28,14 +28,34 @@ export default {
   padding: .5rem 0 .8rem;
 
   .navbar {
-    max-width: $normal-width;
     margin: 0 auto;
+    max-width: $normal-width;
+    display: flex;
+    & > section {
+      justify-content: center;
+    }
+    @media screen and (max-width: $normal-width) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    @media screen and (max-width: $size-xs) {
+      flex-direction: column;
+
+      & > div {
+        margin: 0 auto;
+      }
+
+      .post {
+        margin-top: .5rem;
+        width: 60vw;
+      }
+    }
     .title a{
       padding-left: 0;
       padding-right: 0;
       color: #fff;
     }
-    .navbar-section {
+    .section {
       button {
         background-color: $primary-color;
         color: #fff;
@@ -48,15 +68,15 @@ export default {
           box-shadow: none;
         }
       }
-
+  
       a {
         cursor: pointer;
         font-size: 1rem;
-
+  
         &:hover {
           color: $primary-color;
         }
-
+  
         &:focus {
           box-shadow: none;
           color: #fff;
