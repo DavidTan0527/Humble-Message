@@ -3,7 +3,7 @@
     <div class="navbar-container">
       <header class="navbar">
         <section class="navbar-section title">
-          <router-link to="/" class="btn btn-link">Message Board App</router-link>
+          <router-link to="/" class="btn btn-link">Humble Dog Message Board</router-link>
         </section>
         <section class="navbar-section">
           <router-link to="/post" 
