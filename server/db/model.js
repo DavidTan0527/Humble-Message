@@ -3,7 +3,7 @@ const db = require('./connections');
 
 const schema = Joi.object().keys({
   self   : Joi.string().required(),
-  target : Joi.string().required().regex(/\//ig, { invert: true }),
+  target : Joi.string().required().regex(/\/+/, { invert: true }),
   message: Joi.string().required(),
   public : Joi.boolean().required()
 });
