@@ -4,7 +4,7 @@
     :target="message.target" :message="message.message" :self="message.self">
     </message>
   </div>
-</template>
+</template> 
 
 <script>
 import message from '@/components/message'

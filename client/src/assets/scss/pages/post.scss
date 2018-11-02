@@ -1,7 +1,7 @@
 #_post {
   max-width: $normal-width;
   margin: .8rem auto;
-  padding: 2rem 5rem 0;
+  padding: 1rem 5rem 0;
   @media screen and (max-width: $size-xs) {
     padding: 2rem 2.5rem 0;
 
@@ -9,6 +9,14 @@
       width: 100%;
     }
   }
+
+  .instruct {
+    color: rgba(#fff, .35);
+    h3 {
+      margin: 0;
+    }
+  }
+
   .form-group {
     .form-label {
       font-size: $font-size-lg;

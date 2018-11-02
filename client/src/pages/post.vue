@@ -1,6 +1,12 @@
 <template>
   <div id="_post">
-    <div class="form-group">
+    <div class="instruct mb-2">
+      <h3>Instructions:</h3>
+      <div class="msg" v-for="i in instructions" :key="i">
+        ‣ {{i}}
+      </div>
+    </div>
+    <div class="form-group mt-2">
       <label class="form-label" for="self">From</label>
       <input class="form-input" type="text" id="self" 
       placeholder="Your name..." v-model="formData.self"
@@ -48,7 +54,13 @@ export default {
         target: "",
         message: "",
         public: false,
-      }
+      },
+      instructions: [
+        "All inputs are required", 
+        "Private messages can only be seen when specific URL is typed",
+        "Example: private message to: Bob -> https://message-chkl.ml/Bob",
+        "Public messages can be seen by default on the main page"
+      ]
     }
   },
   methods: {
