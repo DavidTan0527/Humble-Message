@@ -14,8 +14,8 @@ export default {
   }),
   mounted() {
     // production
-    const API_URL = "https://178.128.126.127/api/messages"
-    const API_URL_NAME = "https://178.128.126.127/api/messages/name?target="+this.$route.params.name
+    const API_URL = "https://message-chkl.ml/api/messages"
+    const API_URL_NAME = "https://message-chkl.ml/api/messages/name?target="+this.$route.params.name
     // localhost
     // const API_URL = "http://localhost:3000/messages"
     // const API_URL_NAME = "http://localhost:3000/messages/name?target="+this.$route.params.name

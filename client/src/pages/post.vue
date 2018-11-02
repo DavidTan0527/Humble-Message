@@ -31,7 +31,7 @@
 
 <script>
 // production
-const API_URL = "https://178.128.126.127/api/messages"
+const API_URL = "https://message-chkl.ml/api/messages"
 // localhost
 // const API_URL = "http://localhost:3000/messages"
 export default {
