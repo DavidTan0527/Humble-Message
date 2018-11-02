@@ -18,6 +18,12 @@
       placeholder="Write your message..." rows="3" v-model="formData.message"
       name="message" v-validate="'required'"></textarea>
     </div>
+    <div class="form-group">
+      <label class="form-switch">
+        <input type="checkbox" v-model="formData.public">
+        <i class="form-icon"></i> Show message as public
+      </label>
+    </div>
 
     <button class="btn btn-lg btn-primary" @click="post()">Submit</button>
   </div>
@@ -29,12 +35,19 @@ const API_URL = "https://178.128.126.127/api/messages"
 // localhost
 // const API_URL = "http://localhost:3000/messages"
 export default {
+  mounted() {
+    this.formData.self = "";
+    this.formData.target = "";
+    this.formData.message = "";
+    this.formData.public = false;
+  },
   data() {
     return {
       formData: {
         self: "",
         target: "",
-        message: ""
+        message: "",
+        public: false,
       }
     }
   },
