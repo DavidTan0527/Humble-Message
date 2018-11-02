@@ -24,7 +24,7 @@
 </template>
 
 <script>
-const API_URL = "http://localhost:3000/messages"
+const API_URL = "http://178.128.126.127/api/messages"
 export default {
   data() {
     return {
