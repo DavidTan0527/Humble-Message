@@ -17,7 +17,7 @@ function getAll() {
 }
 
 function get(name) {
-  var n = new RegExp(name,'i');
+  var n = new RegExp('^'+name+'$','i');
   return messages.find({
     "target": n
   })
